@@ -1,0 +1,249 @@
+@import "animate.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
+  height: 100%;
+  width: 100vw;
+  overflow-y: scroll;
+  /* Fix lỗi scrollbar lib aos */
+  overflow-x: hidden;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins-Regular";
+  color: white;
+  background-color: #000000;
+  transition: all 1s linear;
+}
+
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: local("Poppins-Regular"), url("./fonts/Poppins-Regular.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: local("Poppins-SemiBold"), url("./fonts/Poppins-SemiBold.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins-Bold";
+  src: local("Poppins-Bold"), url("./fonts/Poppins-Bold.ttf") format("truetype");
+  font-style: normal;
+}
+
+.header-logo {
+  height: 45px;
+}
+
+.border-bgray {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.launch-button {
+  border-radius: 4px;
+  background: #f3bf42;
+  color: #060606;
+  font-weight: 700;
+  font-family: "Poppins-SemiBold";
+  box-shadow: 0px 3px 18px 0px rgba(243, 191, 66, 0.5),
+    0px 2px 16px 0px rgba(243, 191, 66, 0.4);
+  display: flex;
+  padding: 12px 24px;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #f3bf42
+}
+.radial-bg {
+  background: radial-gradient(
+    47.01% 50% at 50% 50%,
+    rgba(243, 191, 66, 0.15) 0%,
+    rgba(243, 191, 66, 0) 50%
+  );
+  filter: brightness(0.5);
+  width: 100%;
+  height: 400px;
+}
+
+/* Thiết kế responsive với css thuần hay: dù chia file css chưa tốt */
+@media only screen and (max-width: 1200px) {
+  .hidden-md {
+    display: none;
+  }
+  .show-md {
+    display: block;
+  }
+  .show-md-flex {
+    display: flex;
+  }
+  .text-md-larger {
+    font-size: 24px;
+  }
+  .text-md-larger1 {
+    font-size: 20px;
+    text-align: center;
+    max-width: 200px;
+  }
+  .text-md-larger-2 {
+    font-size: 64px;
+  }
+  .text-md-larger-3 {
+    font-size: 32px;
+  }
+  .text-md-larger-4 {
+    font-size: 44px;
+  }
+  .flex-col-md {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .flex-md {
+    display: flex;
+  }
+  .flex-colr-md {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .px-md-smaller {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .py-md-smaller2 {
+    padding-top: 150px;
+    padding-bottom: 100px;
+  }
+  .max-w-685 {
+    max-width: 685px;
+  }
+  .py-md-smaller {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .no-w-limit {
+    max-width: 700px;
+  }
+  .w-md-larger {
+    /* width: 300px; */
+  }
+  .w-full-md {
+    /* width: 700px; */
+  }
+  .pt-smaller{
+    padding-top: 150px;
+  }
+  .no-absolute-md {
+    position: relative;
+  }
+  .no-top-md {
+    top: 0;
+    margin-top: 32px;
+  }
+  .no-right-md {
+    right: 0;
+  }
+  .mt-md {
+    margin-top: 16px;
+  }
+  .light-height-md {
+    line-height: initial;
+  }
+  .top-full-md {
+    top: -500px;
+  }
+  .top-smaller {
+    top: -242px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .blur-when-small {
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+  }
+
+  .padding-0-when-small {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .center-xl {
+    justify-content: center;
+  }
+  .end-xl {
+    justify-content: end;
+  }
+  .pt-more {
+    padding-top: 200px;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .top-right-more {
+    right: -101px;
+    top: 482px;
+  }
+  .top-full-xxl {
+    top: -800px;
+  }
+  .top-smaller {
+    top: -124px;
+  }
+}
+@media only screen and (min-width: 2000px) {
+  .pt-more {
+    padding-top: 400px;
+  }
+  .top-smaller {
+    top: -100px;
+  }
+}
+@media only screen and (min-width: 2600px) {
+  .pt-more {
+    padding-top: 400px;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  .max-width-smaller {
+    max-width: 400px;
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  .flex-md-wrap {
+    flex-wrap: wrap;
+  }
+  .hidden-xl {
+    display: none;
+  }
+  .fullWidth-underxl{
+    width: 100%;
+    max-width: 100%;
+  }
+}
